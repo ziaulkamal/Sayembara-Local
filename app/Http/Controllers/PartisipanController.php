@@ -196,7 +196,7 @@ class PartisipanController extends Controller
 
         try {
             $client = new Client([
-                'base_uri' => 'https://ziadns.my.id',
+                'base_uri' => env('URL_GATEWAY_WA'),
                 'timeout'  => 10.0,
                 'verify'   => false, // kalau SSL self-signed
             ]);
