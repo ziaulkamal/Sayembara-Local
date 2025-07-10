@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: laravel-ziadev
+    container_name: backend_sayembara
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+    networks:
+      - laravel

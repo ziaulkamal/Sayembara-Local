@@ -1,0 +1,9 @@
+/* Custom style untuk error input */
+input.invalid {
+    border-color: red;
+    background-color: #ffe6e6;
+}
+
+input.valid {
+    border-color: green;
+}
