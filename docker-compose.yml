@@ -9,5 +9,15 @@ services:
     working_dir: /var/www
     volumes:
       - .:/var/www
+    ports:
+      - "5011:9000"
     networks:
-      - laravel
+      - apps_network
+      - mysql_network
+
+networks:
+  apps_network:
+    external: true
+  mysql_network:
+    external: true
+
