@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Studio | Register Peserta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon.png') }}">
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="{{ asset('assets/css/vendor.min.css') }}" rel="stylesheet">

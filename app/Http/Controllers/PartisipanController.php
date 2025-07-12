@@ -175,9 +175,14 @@ class PartisipanController extends Controller
 
     public function dashboard()
     {
-    //    dd(Session::get('guest_login'));
+        $nik = Session::get('nik');
+        $peserta = PesertaKontestasi::with('dokumen')->where('nik', $nik)->first();
 
-        return view('dashboard.index');
+        if (!$peserta) {
+            return redirect()->route('login')->with('error', 'Peserta tidak ditemukan.');
+        }
+
+        return view('dashboard.index', compact('peserta'));
     }
 
     private function sendOtpWhatsapp($nomorHp, $otp)

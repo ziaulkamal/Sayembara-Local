@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Studio | Login</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon.png') }}">
 	<link href="{{ asset('assets/css/vendor.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">

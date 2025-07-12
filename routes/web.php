@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PartisipanController;
+use App\Http\Controllers\UploadDokumenController;
 use Illuminate\Support\Facades\Route;
+
+
 
 // route::get('/', function () {
 //     return redirect()->route('login');
@@ -29,5 +33,9 @@ Route::get('/dashboard', [PartisipanController::class, 'dashboard'])->middleware
 Route::get('/dashboard/upload', function () {
     return view('dashboard.upload');
 })->middleware('guest.login')->name('dashboard.upload.form');
+Route::post('/upload-auto', [UploadDokumenController::class, 'autoUpload'])->name('upload.auto');
+Route::post('/dashboard/verifikasi-submit', [UploadDokumenController::class, 'verifikasiSubmit'])->name('verifikasi.submit');
+
+
 
 Route::post('/dashboard/upload', [\App\Http\Controllers\DashboardController::class, 'upload'])->middleware('guest.login')->name('dashboard.upload');
